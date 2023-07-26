@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel Gallery</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <main>
+    <section class="swiper-wrapper">
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./img/pic1.png" alt="news1">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolore!</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./img/pic2.png" alt="news2">
+            <h2>Qui excepturi harum id!</h2>
+            <p>Laudantium, dicta magni perspiciatis blanditiis quas temporibus facilis! Adipisci, maiores.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./img/pic3.png" alt="news3">
+            <h2>Ducimus saepe consequatur ex?</h2>
+            <p>Eligendi nesciunt officiis delectus illo placeat, nemo corrupti iure dolore.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./img/pic4.png" alt="news4">
+            <h2>Consectetur fuga ipsa odio.</h2>
+            <p>Distinctio ducimus rem ullam? Dolor qui officiis doloribus deserunt repellat!</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./img/pic5.png" alt="news5">
+            <h2>Exercitationem quis minima iure.</h2>
+            <p>Reiciendis magni ad eius? Fugit necessitatibus omnis iste maiores. Omnis?</p>
+          </div>
+        </div>
+      </article> 
+    </section>
+    <nav class="swiper-pagination"></nav>
+    <nav class="swiper-button-prev navi"></nav>
+    <nav class="swiper-button-next navi"></nav>
+  </main>
+  <footer>
+    2023 &copy; ALL RIGHTS RESERVED.
+  </footer>
+
+  <script>
+    const swiper = new Swiper("main",{
+      speed: 500,
+      loop: true,
+      direction: "horizontal",
+      grabCursor: true,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      centeredSlides: true, 
+      pagination: {
+        el: ".swiper-pagination", 
+        type: "fraction"
+      },
+      navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next"
+      },
+      effect: "coverflow",
+      coverflowEffect:{
+        rotate: 50,
+        stretch: -100,
+        depth: 400, 
+        slideShadows: false
+      }
+    });
+  </script>
+  
+</body>
+</html>
